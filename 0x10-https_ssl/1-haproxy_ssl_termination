@@ -41,8 +41,8 @@ listen naaakuokor
         bind :80
         mode http
         balance roundrobin
-	server 14231-web-01 44.200.178.214:80 check
-	server 14231-web-02 35.174.60.115:80 check
+	server 14231-web-01 100.25.48.93:80 check
+	server 14231-web-02 34.229.71.18:80 check
 
 frontend www-http
         bind :80
@@ -56,5 +56,5 @@ frontend www-https
 
 backend web-backend
         redirect scheme https if !{ ssl_fc }
-	server 14231-web-01 44.200.178.214:80 check        
-	server 14231-web-02 35.174.60.115:80 check
+	server 14231-web-01 100.25.48.93:80 check        
+	server 14231-web-02 34.229.71.18:80 check
